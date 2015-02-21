@@ -36,7 +36,7 @@ int main()
  }
 
  pndCount(aline, len);
- 
+ digitCounter(aline, len); 
  return 0;
 }
 
@@ -55,10 +55,28 @@ int pndCount(char a[], int arraySize)
   {
 	count++;
   }
-
-
  }
 
  printf("\nThe number of '#' characters is: %d\n", count);	
+ return count;
+}
+
+
+int digitCounter(char a[], int arraySize)
+{
+ char c;
+ int i;
+ int count = 0;
+
+ for(i = 0; i< arraySize; ++i)
+ {
+  c = a[i];
+  if(c=='1'||c=='2'||c=='3'||c=='4'||c=='5'||c=='6'||c=='7'||c=='8'||c=='9')
+  {
+	count++;
+  }
+ }
+
+ printf("\nThe number of digit characters: %d\n", count);
  return count;
 }
